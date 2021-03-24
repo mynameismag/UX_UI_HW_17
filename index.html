@@ -19,7 +19,7 @@
 
 
         <header>
-            <img src='images/logo.png' alt="logo" class="resposive">
+            <img src='images/logo.png' alt="logo">
 
             <ul>
                 <li>About</li>
@@ -28,16 +28,19 @@
                 <li>Contact</li>
             </ul>
         </header>
+
         <section class="herosection">
 
-            <div>
+            <div class="left">
                 <h1>Hello,</h1>
                 <h3>my name is Maggie Ma.</h3>
                 <h5>I'm an UX/UI designer with 10+ in graphic design field.</h5>
             </div>
-            <div class="heroimage"><img src='images/heroimage.png' alt="Maggie's self portrait" class="resposive"></div>
-            <hr>
+            <div class="heroimage"><img src='images/heroimage.png' alt="Maggie's self portrait"></div>
+
         </section>
+
+      
         <section class="aboutme">
             <h3>About Me</h3>
             <p>👋🏻Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fames pretium, placerat quam fringilla eget
@@ -53,7 +56,8 @@
                 Auctor aliquam bibendum at sollicitudin dui nibh elementum fermentum ultrices🌱.</p>
             <br>
             <p>It’s great to meet you, now lets’ create something wonderful together!</p>
-            <div>
+
+            <div class="row flex-row">
                 <p>
                     You can also find me at:
                 </p>
@@ -66,61 +70,76 @@
             </div>
         </section>
 
-
-        <br>
-        <hr>
-        <br>
-
+            <div class="border1"></div>
 
         <section class="selectedwork">
 
             <h3>Selected work</h3>
-            <h6>View selected portfolio projects below. Projects span
-                across UX research, UI/UX, interaction design.</h6>
+            <p>View selected portfolio projects below. Projects span
+                across UX research, UI/UX, interaction design.</p>
             <a>Contact to learn more</a>
-            <br>
-            <br>
-            <div id="projectimage">
-            <a><img src="images/withu.png" alt="withu" class="resposive"></a>
-            <br> <br> <br> <br>
-            <br> <br> <br> <br>
-            <a><img src='images/5acres.png' alt="5acres" class="resposive"></a>
-            <br> <br> <br> <br>
-            <br> <br> <br> <br>
-            <a><img src='images/doi.png' alt="doi" class="resposive"></a>
-        </div>
+          
+            <div class="projectimage">
+                <a><img src="images/withu.png" alt="withu"></a>
+              
+                <a><img src='images/5acres.png' alt="5acres"></a>
+    
+                <a><img src='images/doi.png' alt="doi"></a>
+            </div>
         </section>
 
+            <div class="border2"></div>
 
-        <br>
-        <hr>
-        <br>
-        <br>
-        <br>
-
-        <section id="footer">
+            
+        <section id="contact">
             <h3>Want to collaborate?</h3>
             <h6>Use the contact form to request more information or for new project-inquiry. Your email will be answered
                 at
                 first come-first served basis and as soon as possible. Thank you for your patience.</h6>
-            <br>
-            <br>
-
-            <br>
+            
             <form>
-                <label>First name *</label>
-                <input type="text" id="fname" name="fname"><br><br>
-                <label for="lname">Last name *</label>
-                <input type="text" id="lname" name="lname"><br><br>
-                <label for="email">Email *</label>
-                <input type="text" id="email" name="email"><br><br>
-                <label for="phonenumber">Phone number</label>
-                <input type="text" id="phonenumber" name="phonenumber"><br><br>
-                <label for="message">Message</label>
-                <input type="text" id="message" name="message"><br><br>
-                <input type="submit" value="Submit">
+                <div id="fname" >
+                    <label>First name *</label>
+                    <br>
+                    <input required type="text" name="fname">
+                </div>
+                <div id="lname">
+                    <label for="lname">Last name *</label>
+                    <br>
+                    <input required type="text" name="lname">
+                </div>
+                <div id="email">
+                    <label for="email">Email *</label>
+                    <br>
+                    <input required type="email" name="email">
+                </div>
+                <div id="phonenumber">
+                    <label for="phonenumber">Phone number</label>
+                    <br>
+                    <input type="text" name="phonenumber">
+                </div>
+                <div id="message">
+                    <label for="message">Message</label>
+                    <br>
+                    <input type="text" name="message">
+                </div>
+                <button type="submit" name="Submit">Submit</button>
+  
             </form>
         </section>
+
+        
+        <section id="footer">
+            <div id="footername">Maggie Ma</div>
+            <div id="social">
+                <a href="http://www.linkedin.com" target="-blank"><img src='images/linkedin.png' alt="icon"></a>
+                <a href="https://www.instagram.com/" target="-blank"><img src='images/ig.png' alt="icon"></a>
+                <a href="http://twitter.com" target="-blank"><img src='images/twitter.png' alt="icon"></a>
+                <a href="https://www.behance.net/" target="-blank"><img src='images/behance.png' alt="icon"></a>
+            </div>
+        </section>
+
+
 
 
 </body>
