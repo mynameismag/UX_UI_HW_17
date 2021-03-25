@@ -1,11 +1,22 @@
+
+
 :root {
     font-family: 'Roboto', sans-serif;
     color:#464646;
 }
 
+*{
+    scroll-behavior: smooth;
+}
+
+
+
+/* GENERAL */
 body {
     min-width: 422px;
 }
+
+/* GRID */
 .grid {
     display:grid;
     /* 8 equal columns, 1fr= fractional unit */
@@ -20,13 +31,13 @@ body {
 
 }
 
+
+
+/* HEADER */
 header {
     display:grid;
     grid-template-columns: repeat(8, 1fr);
     grid-column: 1/9;
-    /* background-color: cadetblue; */
-    
-    
 }
 
 header img {
@@ -45,7 +56,6 @@ padding-right:3vw;
 }
 
 header ul li {
-  
     display:inline-block;
     text-decoration: none;
     padding:4vh 2vw 0 4vw;
@@ -54,75 +64,60 @@ header ul li {
 }
 
 
-
-
-header ul li :hover{
-    color:cadetblue;
-    
-    
+.navlink {
+    color:#464646;
+    text-decoration:none;
 }
 
 
 
 
 
+
+/* HERO SECTION */
 .herosection {
-
-    grid-column: 2/8;
-    grid-row:2/4;
     display:grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    /* border-bottom: 1px solid black; */
+    grid-column: 2/8;
+    grid-row: 3;
+    grid-template-areas: 
+    "herotext herotext herotext herotext herotext herotext herotext maggie";
+    border-bottom: 1px solid black;
 }
-
-
+​
 .heroimage {
-   grid-column: 6/9;
-   grid-row:1/3;
+   grid-area: maggie;
    justify-self: end;
-   padding:3vh 3vw 0 0;
    align-self: end;
-   margin-bottom: -0.5vh;
 }
-
-
 .left {
-    grid-column: 1/6;
-    grid-row: 1/5;
-    display: grid;
-    grid-template-rows: 2fr .1fr .5fr 3fr;
-    color: black;
+    grid-area: herotext;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-bottom: 35px;
 }
-
 
 
 .herosection .left h1 {
-    grid-column: 1/6;
-    grid-row: 2/3;
     font-family: 'Playfair Display', serif;
-    font-size: 6rem;
+    font-size: 10rem;
     /* 1rem=16px */
     font-weight: bold;
     padding:0;
     margin:0;
-    align-self: end;
+    line-height: 10rem;
+    color:#000;
 }
-
-
-
 .herosection .left h3 {
-    grid-column: 1/6;
-    grid-row: 3/4;
+    color: var(--black);
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
     font-weight: bold;
     padding:0;
     margin:0;
+    color:#000;
 }
-
-
-
 .herosection .left h5 {
     grid-column: 1/6;
     grid-row: 4/5;
@@ -132,16 +127,11 @@ header ul li :hover{
     margin:0;
     color:#464646;
     padding-top:1vh;
+    
 }
 
-.border3 {
-    grid-column: 2/8;
-    grid-row: 3/4;
-    border-bottom: 1px solid black;
-    height:.25vh;
-    padding-top:5vh;
-}
 
+/* ABOUT */
 .aboutme {
     grid-column: 2/8;
     grid-row:4/6;
@@ -193,7 +183,7 @@ header ul li :hover{
     grid-column: 7/8;
     /* grid-row: ; */
     /* use "margin-left auto" to push things to the right */
-    margin-left: auto;
+    margin-left: 1fr,1fr;
     /* add cursor:pointer to <a> to show the little hand*/
     cursor: pointer;
     border-color: cadetblue;
@@ -355,3 +345,12 @@ form button {
 
 
 
+/* @media (min-width: 300px) and (max-width: 600px){
+    .herosection {
+        grid-column: 2/8;
+        grid-row: 2;
+        grid-template-areas: 
+        "herotext herotext herotext herotext herotext herotext herotext herotext" 
+        "maggie maggie maggie maggie maggie maggie maggie maggie";
+        border-bottom: 1px solid black;
+} */
