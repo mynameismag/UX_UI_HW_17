@@ -1,4 +1,4 @@
-
+/* Maggie's working file */
 
 :root {
     font-family: 'Roboto', sans-serif;
@@ -64,26 +64,38 @@ header ul li {
 }
 
 
-.navlink {
+header .navlink {
     color:#464646;
     text-decoration:none;
 }
 
 
-
-
+header ul li :hover{
+    text-decoration:solid underline rgb(133, 221, 224) 4px;
+}
 
 
 /* HERO SECTION */
 .herosection {
     display:grid;
     grid-column: 2/8;
-    grid-row: 3;
+    grid-row: 2;
     grid-template-areas: 
     "herotext herotext herotext herotext herotext herotext herotext maggie";
     border-bottom: 1px solid black;
 }
-​
+@media (min-width: 300px) and (max-width: 600px){
+    .herosection {
+        grid-column: 2/8;
+        grid-row: 2;
+        grid-template-areas: 
+        "herotext herotext herotext herotext herotext herotext herotext herotext" 
+        "maggie maggie maggie maggie maggie maggie maggie maggie";
+        border-bottom: 1px solid black;
+    }
+}
+
+
 .heroimage {
    grid-area: maggie;
    justify-self: end;
@@ -177,13 +189,15 @@ header ul li {
     /* it adds space between 2 lines */
        padding-top: .5vh;
 }
+
+
 .aboutme button{
     height: 60px;
     width: 200px;
     grid-column: 7/8;
     /* grid-row: ; */
     /* use "margin-left auto" to push things to the right */
-    margin-left: 1fr,1fr;
+    margin-left: auto;
     /* add cursor:pointer to <a> to show the little hand*/
     cursor: pointer;
     border-color: cadetblue;
@@ -195,6 +209,9 @@ header ul li {
     margin-left: auto;
     background-image: url(../images/moonfooter.jpg);
 }
+
+
+
   .selectedwork {
     grid-column: 2/8;
     grid-row: 7/12;
@@ -214,11 +231,16 @@ header ul li {
     margin-bottom: 0;
 }
 
-/* .selectedwork p {
-    padding-top: -1vh;
-    width: 35vw;
-} */
 
+.learnmore {
+    color:rgb(60, 202, 207);
+}
+
+
+.learnmore :hover{
+    color:rgb(255, 190, 130)
+    
+}
 .border2 {
     grid-column: 2/8;
     grid-row: 12/14;
@@ -248,6 +270,7 @@ header ul li {
     grid-row: 4/5;
     font-size: 1rem;
     padding-bottom: 7vh;
+    line-height: 1.8;
 }
 form {
     grid-column: 2/8;
@@ -313,7 +336,7 @@ form button {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
 }
-#footername {
+/* #footername {
     grid-column: 2/8;
     grid-row: 1/2;
     font-family: 'Playfair Display', serif;
@@ -321,7 +344,10 @@ form button {
     font-weight:bold ;
     justify-self: center;
     padding: 2vh 0 1vh 0;
-}
+} */
+
+
+
 #social {
     grid-column: 2/8;
     grid-row: 2/3;
@@ -345,12 +371,156 @@ form button {
 
 
 
-/* @media (min-width: 300px) and (max-width: 600px){
+@media (min-width: 300px) and (max-width: 600px){
     .herosection {
         grid-column: 2/8;
-        grid-row: 2;
+        grid-row: 3;
         grid-template-areas: 
         "herotext herotext herotext herotext herotext herotext herotext herotext" 
         "maggie maggie maggie maggie maggie maggie maggie maggie";
         border-bottom: 1px solid black;
-} */
+} }
+
+
+
+
+/* withÜ page */
+
+
+
+.work {
+    width: 120vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10vh;
+}
+
+
+
+
+
+.work > div {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-bottom: 8vh;
+    
+}
+
+
+
+.overview {
+    width: 60vw;
+   padding: 5vh 0 2vh 0;
+  
+}
+
+.work h3 {
+    color:#000;
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: bold;
+    padding-top: 5vh;
+    margin:0;
+
+}
+.work h4 {
+    color:#464646;
+    font-size: 1.25rem;
+    font-weight: normal;
+}
+
+.work h5 {
+    font-size: 1.45rem;
+    font-family: 'Playfair Display', serif;
+    /* font-size: 1.25rem; */
+    margin:0;
+    color:black;
+    padding-top:5vh;
+
+}
+
+.nextproject {
+    float: right;
+    padding-bottom: 10vh;
+    color:#464646;
+    text-decoration: none;
+}
+a.nextproject:hover, a.nextproject:active {
+    text-decoration:solid underline rgb(133, 221, 224) 4px;
+    }
+    
+.withulink {
+    padding-top: 2vh;
+    color:#7B9BF4;
+    text-decoration: none;
+}
+
+a.withulink:hover, a.withulink:active {
+    color: rgb(60, 202, 207);
+    font-weight: bold;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+/* Adding Slideshows */
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width:  1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #7B9BF4;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
