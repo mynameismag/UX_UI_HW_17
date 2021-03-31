@@ -142,7 +142,10 @@ header ul li :hover{
     
 }
 
-
+.project :hover {
+    border: 2px solid rgb(133, 221, 224);
+    padding: 0;
+}
 /* ABOUT */
 .aboutme {
     grid-column: 2/8;
@@ -415,6 +418,7 @@ form button {
     width: 60vw;
    padding: 5vh 0 2vh 0;
   
+  
 }
 
 .work h3 {
@@ -452,13 +456,13 @@ a.nextproject:hover, a.nextproject:active {
     text-decoration:solid underline rgb(133, 221, 224) 4px;
     }
     
-.withulink {
+.prototypelink {
     padding-top: 2vh;
     color:#7B9BF4;
     text-decoration: none;
 }
 
-a.withulink:hover, a.withulink:active {
+a.prototypelink:hover, a.withulink:active {
     color: rgb(60, 202, 207);
     font-weight: bold;
     }
@@ -524,3 +528,35 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
+
+.hifilink {
+    padding-top: 2vh;
+    color:#7B9BF4;
+    text-decoration: none;
+
+}
+
+a.hifilink:hover, a.withulink:active {
+    color: rgb(60, 202, 207);
+    font-weight: bold;
+    text-decoration: none;
+    }
+
+
+.container {
+    position: relative;
+  }
+  
+  .previous {
+    position: absolute;
+    
+    left: 16px;
+    font-size: 18px;
+  }
+  
+  .next {
+    position: absolute;
+    
+    right: 16px;
+    font-size: 18px;
+  }
