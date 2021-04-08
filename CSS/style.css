@@ -142,9 +142,9 @@ header ul li :hover{
     
 }
 
-.project :hover {
+.project > a img:hover {
     border: 2px solid rgb(133, 221, 224);
-    padding: 0;
+    
 }
 /* ABOUT */
 .aboutme {
@@ -223,7 +223,8 @@ header ul li :hover{
   }
 .selectedwork a img {
     width: 60vw;
-    padding: 5vh 0 5vh 0;
+    /* padding: 5vh 0 5vh 0; */
+    margin-bottom: 10vh;
 }
 .selectedwork h3 {
     color: black;
